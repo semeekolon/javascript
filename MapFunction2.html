@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<button onclick="myFunction()">Get Fullname</button>
+
+<p id="demo"></p>
+
+<script>
+
+    const Employees= [
+    {fname: " One", lname: "Two"},
+    {fname: " Two", lname: "Three"},
+    {fname: " Three", lname: "Four"},
+    {fname: " Four", lname: "Five"},
+    {fname: " Five", lname: "Six"},
+    {fname: " Six", lname: "Seven"},
+    {fname: " Seven", lname: "Eight"},
+    {fname: " Eight", lname: "Nine"},
+    {fname: " Nine", lname: "Ten"}
+    ];
+
+    function getFullname(item, index){
+
+        var fullname = [item.fname, item.lname].join(" ");
+        return  fullname;
+
+    }
+
+    function myFunction(){
+        // document.getElementById("demo").innerHTML = Employees.map(getFullname);
+        document.getElementById("demo").innerHTML = Employees.map((x,y) => [x.fname, x.lname, y].join(" "));
+
+    }
+
+</script>
+
+</body>
+</html>

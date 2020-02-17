@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get the square root of each element in the array.</p>
+
+<button onclick="myFunction1()">Square (Map)</button>
+
+<p id="demo"></p>
+
+<script>
+var numbers = [4, 9, 16, 25];
+
+function square(n){
+	return n*n;
+}
+// takes an array and transforms into array of same length but with each individual items transformed
+//filter transforms an array into small array
+function myFunction3() {
+    x = document.getElementById("demo")
+    x.innerHTML = numbers.map(x =>x*x);
+}
+
+function myFunction2() {
+    x = document.getElementById("demo")
+    x.innerHTML = numbers.map(function(x){ 
+    return x*x;
+    });
+}
+
+function myFunction1() {
+    x = document.getElementById("demo") 
+    x.innerHTML = numbers.map(square);
+}
+</script>
+
+</body>
+</html>

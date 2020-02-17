@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get the sum of the numbers in the array.</p>
+<button onclick="myFunction()">Try it</button>
+
+<p>Sum of numbers in array: <span id="demo"></span></p>
+
+<script>
+var lsNumbers = [65, 44, 12, 4];
+
+//The reduce() method reduces the array to a single value.
+function getSum(total, number) {
+    return total + number;
+}
+
+function myFunction(item) {
+    document.getElementById("demo").innerHTML = lsNumbers.reduce(getSum);
+}
+</script>
+
+</body>
+</html>
